@@ -1,4 +1,11 @@
+type Config = {
+    debug: boolean,
+    fps: number
+}
+
 type State = {
+    canvas: HTMLCanvasElement,
+    context: CanvasRenderingContext2D,
     cursor: Position
 }
 
@@ -12,4 +19,4 @@ type Position = {
     y: number
 }
 
-export { State, Snake, Position }
+export { Config, State, Snake, Position }
