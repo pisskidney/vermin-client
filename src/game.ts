@@ -1,3 +1,9 @@
+import { State, Position } from './types';
+
+const state: State = {
+    cursor: undefined
+}
+
 const FPS: number = 30;
 const SNAKES = new Map<string, Array<{x: number, y: number}>>();
 SNAKES.set('0', [{x: 100, y: 100}]);
@@ -20,4 +26,8 @@ function initGame() {
 
 window.addEventListener('DOMContentLoaded', () => {
     initGame();
+});
+
+window.addEventListener('mousemove', (e: MouseEvent) => {
+    state.cursor = {x: e.clientX, y: e.clientY};
 });
