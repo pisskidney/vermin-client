@@ -9,7 +9,7 @@ System.register("types", [], function (exports_1, context_1) {
 });
 System.register("game", [], function (exports_2, context_2) {
     "use strict";
-    var state, FPS, SNAKES;
+    var state, FPS, snake;
     var __moduleName = context_2 && context_2.id;
     function initGame() {
         const canvas = document.getElementById('canvas');
@@ -28,8 +28,7 @@ System.register("game", [], function (exports_2, context_2) {
                 cursor: undefined
             };
             FPS = 30;
-            SNAKES = new Map();
-            SNAKES.set('0', [{ x: 100, y: 100 }]);
+            snake = new Map();
             window.addEventListener('DOMContentLoaded', () => {
                 initGame();
             });

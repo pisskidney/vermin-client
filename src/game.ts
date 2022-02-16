@@ -1,12 +1,11 @@
-import { State, Position } from './types';
+import { State, Snake, Position } from './types';
 
 const state: State = {
     cursor: undefined
 }
 
 const FPS: number = 30;
-const SNAKES = new Map<string, Array<{x: number, y: number}>>();
-SNAKES.set('0', [{x: 100, y: 100}]);
+const snake = new Map<string, Array<{x: number, y: number}>>();
 
 function initGame() {
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;
